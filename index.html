@@ -1,0 +1,449 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chaco Aventura</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4efe4;
+            color: #2f2418;
+        }
+
+        /* ENCABEZADO */
+        header {
+            background: #4b321d;
+            color: white;
+            padding: 25px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 40px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        /* PORTADA */
+        .hero {
+            min-height: 450px;
+
+            background:
+                linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+                url("https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1600&q=80");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+            color: white;
+            padding: 30px;
+        }
+
+        .hero h2 {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 21px;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        /* CONTENIDO */
+        .contenido {
+            max-width: 1100px;
+            margin: auto;
+            padding: 55px 20px;
+        }
+
+        .contenido > h2 {
+            text-align: center;
+            font-size: 34px;
+            margin-bottom: 15px;
+        }
+
+        .intro {
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto 40px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* TARJETAS */
+        .tarjetas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .tarjeta {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            transition: transform 0.3s;
+        }
+
+        .tarjeta:hover {
+            transform: translateY(-7px);
+        }
+
+        .tarjeta img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+        }
+
+        .tarjeta-contenido {
+            padding: 22px;
+        }
+
+        .tarjeta h3 {
+            color: #4b321d;
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+
+        .tarjeta p {
+            line-height: 1.5;
+        }
+
+        /* EXPERIENCIAS */
+        .experiencias {
+            background: #d9c7a7;
+            padding: 55px 20px;
+        }
+
+        .experiencias h2 {
+            text-align: center;
+            font-size: 34px;
+            margin-bottom: 35px;
+        }
+
+        .cositos {
+            max-width: 1000px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .cosito {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+        }
+
+        .emoji {
+            font-size: 45px;
+            margin-bottom: 12px;
+        }
+
+        .cosito h3 {
+            color: #4b321d;
+            margin-bottom: 8px;
+        }
+
+        /* INSTAGRAM */
+        .instagram {
+            text-align: center;
+            padding: 55px 20px;
+            background: #f4efe4;
+        }
+
+        .instagram h2 {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .instagram p {
+            font-size: 18px;
+        }
+
+        .boton {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 13px 28px;
+            background: #4b321d;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+
+        .boton:hover {
+            background: #6b4929;
+        }
+
+        /* PIE */
+        footer {
+            background: #2f2418;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <h1>🌵 Chaco Aventura</h1>
+        <p>Descubrí la magia del Chaco Paraguayo</p>
+    </header>
+
+
+    <!-- PORTADA -->
+    <section class="hero">
+        <div>
+            <h2>Explorá el Chaco</h2>
+
+            <p>
+                Naturaleza, cultura, aventura y paisajes únicos
+                en el corazón del Paraguay.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- INFORMACIÓN -->
+    <section class="contenido">
+
+        <h2>🌎 Conocé el Chaco</h2>
+
+        <p class="intro">
+            El Chaco Paraguayo es una región llena de paisajes,
+            biodiversidad, historia y cultura. Con Chaco Aventura
+            podés descubrir algunos de los lugares más interesantes
+            del departamento de Boquerón.
+        </p>
+
+
+        <div class="tarjetas">
+
+            <!-- SENDERISMO -->
+            <div class="tarjeta">
+
+                <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=900&q=80">
+
+                <div class="tarjeta-contenido">
+
+                    <h3>🥾 Senderismo</h3>
+
+                    <p>
+                        Recorré senderos y disfrutá de los paisajes
+                        naturales del Chaco mientras conocés su
+                        flora y fauna.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <!-- FAUNA -->
+            <div class="tarjeta">
+
+                <img src="https://images.unsplash.com/photo-1550358864-518f202c02ba?auto=format&fit=crop&w=900&q=80">
+
+                <div class="tarjeta-contenido">
+
+                    <h3>🦌 Fauna chaqueña</h3>
+
+                    <p>
+                        El Chaco cuenta con una gran variedad de
+                        animales adaptados a las condiciones de
+                        esta región.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <!-- NATURALEZA -->
+            <div class="tarjeta">
+
+                <img src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=900&q=80">
+
+                <div class="tarjeta-contenido">
+
+                    <h3>🌳 Naturaleza</h3>
+
+                    <p>
+                        Descubrí bosques, vegetación y paisajes
+                        característicos del Chaco Seco.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <!-- BOQUERÓN -->
+            <div class="tarjeta">
+
+                <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=80">
+
+                <div class="tarjeta-contenido">
+
+                    <h3>🏜️ Boquerón</h3>
+
+                    <p>
+                        Conocé la historia, cultura y lugares
+                        turísticos del departamento de Boquerón.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EXPERIENCIAS -->
+    <section class="experiencias">
+
+        <h2>✨ Viví la aventura</h2>
+
+        <div class="cositos">
+
+
+            <div class="cosito">
+
+                <div class="emoji">🥾</div>
+
+                <h3>Senderismo</h3>
+
+                <p>
+                    Explorá los senderos y paisajes naturales.
+                </p>
+
+            </div>
+
+
+            <div class="cosito">
+
+                <div class="emoji">🌵</div>
+
+                <h3>Flora</h3>
+
+                <p>
+                    Conocé la vegetación característica del Chaco.
+                </p>
+
+            </div>
+
+
+            <div class="cosito">
+
+                <div class="emoji">🦊</div>
+
+                <h3>Fauna</h3>
+
+                <p>
+                    Descubrí la diversidad de animales chaqueños.
+                </p>
+
+            </div>
+
+
+            <div class="cosito">
+
+                <div class="emoji">📸</div>
+
+                <h3>Fotografía</h3>
+
+                <p>
+                    Capturá los increíbles paisajes del Chaco.
+                </p>
+
+            </div>
+
+
+            <div class="cosito">
+
+                <div class="emoji">🏕️</div>
+
+                <h3>Aventura</h3>
+
+                <p>
+                    Viví experiencias únicas rodeado de naturaleza.
+                </p>
+
+            </div>
+
+
+            <div class="cosito">
+
+                <div class="emoji">🌎</div>
+
+                <h3>Turismo</h3>
+
+                <p>
+                    Descubrí un destino diferente en Paraguay.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- INSTAGRAM -->
+    <section class="instagram">
+
+        <h2>📸 Seguinos en Instagram</h2>
+
+        <p>
+            Encontrá más información, fotos y novedades
+            de Chaco Aventura.
+        </p>
+
+        <a
+            class="boton"
+            href="https://www.instagram.com/chacoaventura.py/"
+            target="_blank">
+
+            Ver Instagram
+
+        </a>
+
+    </section>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+
+        <p>
+            © 2026 Chaco Aventura | Turismo en el Chaco Paraguayo
+        </p>
+
+    </footer>
+
+</body>
+</html>
+```
